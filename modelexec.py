@@ -59,10 +59,10 @@ def main(argv):
        vacFseries      = np.array(dataSeries[17])
 
        #Exporting run data into a csv defined by the user
-       if(not outfile):
+       if(not(outfile=='')):
            df = pd.DataFrame({"time" : timeSeries, "susceptibles" : Sseries, "exposed" : Eseries,"i_pre" : I_preseries, "i_sym" : I_symseries,"i_asym" : I_asymseries, "recovered" : Rseries,"hospitalized" : Hseries, "fatalities" : Fseries})
            df.to_csv(outfile+str(i)+'.csv', index=False)
-       if(not vacoutfile):
+       if(not(vacoutfile=='')):
            vacdf = pd.DataFrame({"time" : vactimeSeries, "susceptibles" : vacSseries, "exposed" : vacEseries,"i_pre" : vacI_preseries, "i_sym" : vacI_symseries,"i_asym" : vacI_asymseries, "recovered" : vacRseries,"hospitalized" : vacHseries, "fatalities" : vacFseries})
            vacdf.to_csv(vacoutfile+str(i)+'.csv', index=False)
 
