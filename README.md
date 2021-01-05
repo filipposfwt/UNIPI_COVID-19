@@ -1,0 +1,2 @@
+# UNIPI_COVID-19
+A two-phase stochastic dynamic network compartmental model (a pre-vaccination SEIR and a post-vaccination SVEIR) is developed. The implementation was based on the code available at https://github.com/ryansmcgee/seirsplus .The post-vaccination phase model uses a modified version of models.py code. More specific, some state transition propensities are modified in order to express the vaccination rate and efficacy.
